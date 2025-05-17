@@ -81,7 +81,7 @@ section .container{
   justify-items: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1;
+  
 }
 
 .modal{
@@ -93,24 +93,34 @@ section .container{
   height: 100%;
   overflow: auto;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 5);
+  background-color: rgba(0, 0, 0, .5);
 }
 .modal-content{
   width: 80%;
   max-width: 60rem;
-  background-color: var(--white);
-  margin: 15% auto;
+  background-color: #eee;
+  margin: 10% auto;
   padding: 2rem;
-  border: 1px solid;
+  border: 1px solid #777;
   text-align: center;
-  animation: slide ease .8s;
+  position: relative;
+  animation: slide ease 0.8s;
 }
 
 @keyframes slide{
-  from{
-    transform: translateY(-30);
+  0%{
+    transform: translateY(-30rem);
   }
-  to{
+  100%{
     transform: translateY(0);
   }
+}
+
+.close{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+
 }
